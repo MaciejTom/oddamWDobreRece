@@ -1,0 +1,102 @@
+{
+  "Fundations":[
+    {
+      "name":"Fundacjom",
+         "desc":"jakis opis",
+         "items":[
+            {
+              "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            },
+            {
+               "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            },
+            {
+               "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            },
+            {
+               "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            },
+            {
+               "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            },
+            {
+               "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            },
+            {
+               "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            },
+            {
+               "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            }
+         ]
+      },
+      {
+         "name":"Pozarządowym organizacjom",
+         "desc":"jakis opis",
+         "items":[
+            {
+               "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            },
+            {
+               "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            },
+            {
+               "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            }
+         ]
+      },
+      {
+         "name":"Lokalnym zbiórkom",
+         "desc":"jakis opis",
+         "items":[
+            {
+               "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            },
+            {
+               "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            },
+            {
+               "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            },
+            {
+               "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            },
+            {
+               "header":"to jest header",
+               "subheader":"to jest subheader",
+               "desc":"to jest desc"
+            }
+         ]
+      }
+   ]
+}
