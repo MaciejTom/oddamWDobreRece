@@ -8,10 +8,10 @@ import HomeContactUs from './HomeContactUs';
 
 const Home = () => (
   <>
-  
+
   <HomeHeader name="HomeHeader"/>
   <HomeThreeColumns/>
-  <HomeSimpleSteps name="HomeSimpleSteps"/>
+  <HomeSimpleSteps id="HomeSimpleSteps"/>
   <HomeAbout name="HomeAbout"/>
   <HomeWhoWeHelp name="HomeWhoWeHelp"/>
   <HomeContactUs name="HomeContactUs"/>
