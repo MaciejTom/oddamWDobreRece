@@ -5,16 +5,17 @@ import HomeSimpleSteps from "./HomeSimpleSteps";
 import HomeAbout from './HomeAbout';
 import HomeWhoWeHelp from './HomeWhoWeHelp';
 import HomeContactUs from './HomeContactUs';
+import { Link as ScrollLink } from "react-scroll";
 
 const Home = () => (
   <>
 
-  <HomeHeader name="HomeHeader"/>
+  <HomeHeader />
   <HomeThreeColumns/>
-  <HomeSimpleSteps id="HomeSimpleSteps"/>
-  <HomeAbout name="HomeAbout"/>
-  <HomeWhoWeHelp name="HomeWhoWeHelp"/>
-  <HomeContactUs name="HomeContactUs"/>
+  <HomeSimpleSteps />
+  <HomeAbout />
+  <HomeWhoWeHelp />
+  <HomeContactUs />
   </>
 )
 

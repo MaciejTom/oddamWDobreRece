@@ -1,102 +1,102 @@
 {
-  "Fundations":[
+  "Fundations": [
     {
-      "name":"Fundacjom",
-         "desc":"jakis opis",
-         "items":[
-            {
-              "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            },
-            {
-               "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            },
-            {
-               "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            },
-            {
-               "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            },
-            {
-               "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            },
-            {
-               "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            },
-            {
-               "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            },
-            {
-               "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            }
-         ]
-      },
-      {
-         "name":"Pozarządowym organizacjom",
-         "desc":"jakis opis",
-         "items":[
-            {
-               "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            },
-            {
-               "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            },
-            {
-               "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            }
-         ]
-      },
-      {
-         "name":"Lokalnym zbiórkom",
-         "desc":"jakis opis",
-         "items":[
-            {
-               "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            },
-            {
-               "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            },
-            {
-               "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            },
-            {
-               "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            },
-            {
-               "header":"to jest header",
-               "subheader":"to jest subheader",
-               "desc":"to jest desc"
-            }
-         ]
-      }
-   ]
+      "name": "Fundacjom",
+      "desc": "W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.",
+      "items": [
+        {
+          "header": "to jest header - Fundacjom",
+          "subheader": "to jest subheader1",
+          "desc": "to jest desc"
+        },
+        {
+          "header": "to jest header - Fundacjom",
+          "subheader": "to jest subheader2",
+          "desc": "to jest desc"
+        },
+        {
+          "header": "to jest header - Fundacjom",
+          "subheader": "to jest subheader3",
+          "desc": "to jest desc"
+        },
+        {
+          "header": "to jest header - Fundacjom",
+          "subheader": "to jest subheader4",
+          "desc": "to jest desc"
+        },
+        {
+          "header": "to jest header - Fundacjom",
+          "subheader": "to jest subheader5",
+          "desc": "to jest desc"
+        },
+        {
+          "header": "to jest header - Fundacjom",
+          "subheader": "to jest subheader6",
+          "desc": "to jest desc"
+        },
+        {
+          "header": "to jest header - Fundacjom",
+          "subheader": "to jest subheader7",
+          "desc": "to jest desc"
+        },
+        {
+          "header": "to jest header - Fundacjom",
+          "subheader": "to jest subheader8",
+          "desc": "to jest desc"
+        }
+      ]
+    },
+    {
+      "name": "Organizacjom pozarządowym",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non efficitur nulla. Cras sed efficitur sapien, eget suscipit ligula. Fusce tellus lorem, porttitor vel vulputate imperdiet, tempus ut diam.",
+      "items": [
+        {
+          "header": "to jest header - Organizacjom pozarządowym",
+          "subheader": "to jest subheader1",
+          "desc": "to jest desc"
+        },
+        {
+          "header": "to jest header - Organizacjom pozarządowym",
+          "subheader": "to jest subheader2",
+          "desc": "to jest desc"
+        },
+        {
+          "header": "to jest header - Organizacjom pozarządowym",
+          "subheader": "to jest subheader3",
+          "desc": "to jest desc"
+        }
+      ]
+    },
+    {
+      "name": "Lokalnym zbiórkom",
+      "desc": "Pellentesque eget enim vel est congue feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean pulvinar, felis vitae ultrices faucibus, nulla justo pretium nisi, in ornare massa quam sit amet turpis.",
+      "items": [
+        {
+          "header": "to jest header - Lokalnym zbiórkom",
+          "subheader": "to jest subheader1",
+          "desc": "to jest desc"
+        },
+        {
+          "header": "to jest header - Lokalnym zbiórkom",
+          "subheader": "to jest subheader2",
+          "desc": "to jest desc"
+        },
+        {
+          "header": "to jest header - Lokalnym zbiórkom",
+          "subheader": "to jest subheader3",
+          "desc": "to jest desc"
+        },
+        {
+          "header": "to jest header - Lokalnym zbiórkom",
+          "subheader": "to jest subheader4",
+          "desc": "to jest desc"
+        },
+        {
+          "header": "to jest header - Lokalnym zbiórkom",
+          "subheader": "to jest subheader5",
+          "desc": "to jest desc"
+        }
+      ]
+    }
+  ]
 }

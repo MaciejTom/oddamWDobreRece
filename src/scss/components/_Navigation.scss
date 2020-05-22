@@ -1,0 +1,30 @@
+.Navigation__links {
+  font-size: 0.875rem;
+  color: $color-alt2;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 8.9rem 0 23rem;
+  margin-bottom: 2rem;
+  .Navigation__logIn {
+    text-decoration: none;
+    margin-right: 2rem;
+    padding-top: 0.6rem;
+    &:visited {
+      color: $color-alt2;
+    }
+  }
+  .Navigation__register {
+    text-decoration: none;
+    border: solid 1px $color-alt-yellow;
+    padding: 0.6rem;
+    &:visited {
+      color: $color-alt2;
+    }
+  }
+}
+.Navigation__scrollLinks {
+  font-size: 1.125rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8.9rem 0 11rem;
+}
