@@ -22,21 +22,21 @@ function Navigation() {
           </Link>
         </div>
         <div className="Navigation__scrollLinks">
-          <ScrollLink to="HomeHeader" smooth={true}>
-            Start{" "}
-          </ScrollLink>
+          <Link to="/" className="Navigation__link" smooth={true}>
+            Start
+          </Link>
           <ScrollLink to="HomeSimpleSteps" smooth={true}>
-            {" "}
-            O co chodzi?{" "}
+
+            O co chodzi?
           </ScrollLink>
           <ScrollLink to="HomeAbout" smooth={true}>
-            O nas{" "}
+            O nas
           </ScrollLink>
           <ScrollLink to="HomeWhoWeHelp" smooth={true}>
-            Fundacje i organizacje{" "}
+            Fundacje i organizacje
           </ScrollLink>
           <ScrollLink to="HomeContactUs" smooth={true}>
-            Kontakt{" "}
+            Kontakt
           </ScrollLink>
         </div>
       </nav>

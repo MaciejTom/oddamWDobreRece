@@ -27,4 +27,8 @@
   display: flex;
   justify-content: space-between;
   padding: 0 8.9rem 0 11rem;
+  .Navigation__link {
+    text-decoration: none;
+    color: $color-alt3;
+  }
 }

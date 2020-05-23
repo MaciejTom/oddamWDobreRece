@@ -4,6 +4,7 @@ import {} from 'react-router'
 import Home from './components/Home';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
+import Logout from './components/Logout/Logout';
 import {
   HashRouter as Router,
   Switch,
@@ -22,6 +23,7 @@ function App() {
             <Route exact path="/" component={Home}/>
             <Route path="/logowanie" component={Login}/>
             <Route path="/rejestracja" component={Register}/>
+            <Route path="/wylogowano" component={Logout}/>
 
           </Switch>
 

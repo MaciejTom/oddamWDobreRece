@@ -22,6 +22,7 @@ function HomeWhoWeHelp() {
 
   const handleChangeFundation = e => {
     setCurrent(e.target.id);
+    setCurrentPage(1)
   };
 
   //GET CURRENT
@@ -35,7 +36,10 @@ function HomeWhoWeHelp() {
     pageNumbers.push(i);
   }
   //CHANGE PAGINATE
-  const paginate = (pageNumber) =>  setCurrentPage(pageNumber);
+  const paginate = (pageNumber) =>  {
+
+    setCurrentPage(pageNumber); }
+
 
 
 
@@ -55,15 +59,15 @@ function HomeWhoWeHelp() {
           Lokalnym zbiórkom
         </button>
       </div>
-        <p>{getFundations()?.desc}</p>
+        <p className="WhoWeHelp__describe">{getFundations()?.desc}</p>
         <ul>
-
-            {currentPosts?.map(el => <li>{el.header}<br/>{el.subheader}</li>)}
-            <ul>
-              {pageNumbers.map(number => (<li><a onClick={() => paginate(number) } href="!#">{number}</a></li>))}
-            </ul>
-
+          {currentPosts?.map(el => <li>{el.header}<br/>{el.subheader}</li>)}
         </ul>
+        <ul>
+          {pageNumbers.map(number => (<li onClick={() => paginate(number)}>{number}</li>))}
+        </ul>
+
+
       </section>
     </>
   );
