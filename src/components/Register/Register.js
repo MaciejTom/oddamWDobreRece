@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import ReactDOM from "react-dom";
 import Navigation from "../Home/Navigation";
 import {
@@ -8,8 +8,10 @@ import {
   Link,
   Navlink
 } from "react-router-dom";
+import {withRouter} from "react-router";
+import fire from "../../config/fire.js";
 
-function Register() {
+const Register = ({ history }) => {
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -31,7 +33,12 @@ function Register() {
     }));
   };
 
+
+
+
+
   const validate = () => {
+
     const err = {};
     const re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
@@ -42,11 +49,11 @@ function Register() {
     }
 
     if (form.password.length < 6) {
-      err.password = "Hasło musi posiadać przynajmniej 6 znaków!";
+      err.password = "Podane hasło jest za krótkie!";
     }
 
     if (form.passwordRep.length < 6) {
-      err.passwordRep = "Hasło musi posiadać przynajmniej 6 znaków!";
+      err.passwordRep = "Podane hasło jest za krótkie!";
     } else if (form.passwordRep != form.password) {
       err.passwordRep = "Podane hasła nie pasują do siebie!";
     }
@@ -58,10 +65,19 @@ function Register() {
     return true;
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
     if (validate()) {
-      console.log("form sumbitted", form);
+
+          try {
+            await fire
+            .auth()
+            .createUserWithEmailAndPassword(form.email, form.password);
+            history.push("/");
+          } catch (error) {
+            alert(error);
+          }
+
     }
   };
 
@@ -72,49 +88,50 @@ function Register() {
         <span className="Register__logIn">Zarejestruj się</span>
         <img src={require("./../../assets/Decoration.svg")} />
 
-        <form className="Register__form">
+        <form onSubmit={handleSubmit} className="Register__form">
           <div className="Register__data">
             <label>
               Email
               <input
+                className={!errors.email ? "Register__input" : "Register_error"}
+                
                 type="email"
                 name="email"
                 id="email"
                 onChange={updateForm}
               />
-              {errors.email}
+            <span className="Register_errorText">{errors.email}</span>
             </label>
             <label>
               Hasło
               <input
+                className={!errors.password ? "Register__input" : "Register_error"}
+                
                 type="password"
                 name="password"
                 id="password"
                 onChange={updateForm}
               />
-              {errors.password}
+            <span className="Register_errorText">{errors.password}</span>
             </label>
             <label>
               Powtórz hasło
               <input
+                className={!errors.passwordRep ? "Register__input" : "Register_error"}
+                
                 type="password"
                 name="passwordRep"
                 id="passwordRep"
                 onChange={updateForm}
               />
-              {errors.passwordRep}
+            <span className="Register_errorText">{errors.passwordRep}</span>
             </label>
           </div>
           <div className="Register__btns">
             <Link to="/logowanie" className="btn">
               Zaloguj się
             </Link>
-            <input
-              className="btn"
-              type="button"
-              value="Załóż konto"
-              onClick={handleSubmit}
-            />
+            <input type="submit" className="btn" value="Załóż konto" />
           </div>
         </form>
       </div>
@@ -122,4 +139,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default withRouter(Register);

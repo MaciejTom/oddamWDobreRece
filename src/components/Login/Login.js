@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect, useContext, useCallback } from "react";
 import ReactDOM from "react-dom";
-import Navigation from '../Home/Navigation';
+import Navigation from "../Home/Navigation";
 import {
   HashRouter as Router,
   Switch,
@@ -8,10 +8,11 @@ import {
   Link,
   Navlink
 } from "react-router-dom";
+import { withRouter, Redirect } from "react-router";
+import fire from "../../config/fire.js";
+import { AuthContext } from "../Auth/Auth";
 
-
-function Login() {
-
+function Login({ history }) {
   const [form, setForm] = useState({
     email: "",
     password: ""
@@ -30,20 +31,26 @@ function Login() {
       [name]: ""
     }));
   };
+  ///////LOGIN FIREBASE
+  const handleLogin = useCallback(
+    async event => {
+
+    },
+    [history]
+  );
 
   const validate = () => {
     const err = {};
     const re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-
     if (!form.email) {
-      err.email = "Email jest wymagany";
+      err.email = "Email jest wymagany!";
     } else if (!re.test(form.email)) {
       err.email = "Podany email jest nieprawidłowy!";
     }
 
     if (form.password.length < 6) {
-      err.password = "Hasło musi posiadać przynajmniej 6 znaków!";
+      err.password = "Podane hasło jest za krótkie!";
     }
 
     if (Object.values(err).find(e => e.length)) {
@@ -53,36 +60,62 @@ function Login() {
     return true;
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
     if (validate()) {
       console.log("form sumbitted", form);
+      try {
+        await fire.auth().signInWithEmailAndPassword(form.email, form.password);
+        history.push("/");
+      } catch (error) {
+        alert(error);
+      }
+
     }
-}
+  };
+  const { currentUser } = useContext(AuthContext);
+
+  if (currentUser) {
+    return <Redirect to="/" />;
+  }
 
   return (
     <div className="Login">
-      <Navigation/>
+      <Navigation />
       <div className="Login__main">
         <span className="Login__logIn">Zaloguj się</span>
         <img src={require("./../../assets/Decoration.svg")} />
 
-        <form className="Login__form">
+        <form className="Login__form" onSubmit={handleSubmit}>
           <div className="Login__data">
             <label>
               Email
-              <input type="email" name="email" id="name" onChange={updateForm}/>
-              {errors.email}
+              <input
+                className={!errors.email ? "Login_input" : "Login_error"}
+                type="email"
+                name="email"
+                id="name"
+                onChange={updateForm}
+              />
+            <p className="Login_errorText">{errors.email}</p>
             </label>
             <label>
               Hasło
-              <input type="password" name="password" id="password" onChange={updateForm} />
-              {errors.password}
+              <input
+                className={!errors.password ? "Login_input" : "Login_error"}
+                type="password"
+                name="password"
+                id="password"
+                onChange={updateForm}
+              />
+            <p className="Login_errorText">{errors.password}</p>
             </label>
           </div>
           <div className="Login__btns">
-            <Link to="/rejestracja" className="btn">Załóż konto</Link>
-            <input className="btn" type="button" value="Zaloguj się" onClick={handleSubmit} />
+            <Link to="/rejestracja" className="btn">
+              Załóż konto
+            </Link>
+            <input className="btn" type="submit" value="Zaloguj się" />
           </div>
         </form>
       </div>
@@ -90,5 +123,4 @@ function Login() {
   );
 }
 
-
-export default Login;
+export default withRouter(Login);

@@ -10,10 +10,10 @@ function HomeContactUs() {
   const [errors, setErrors] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
+
   });
-
-
+  const [winInfo, setWinInfo] = useState("");
 
   const updateForm = e => {
     const { name, value } = e.target;
@@ -46,31 +46,40 @@ function HomeContactUs() {
       err.message = "Wiadomość musi mieć conajmniej 120 znaków!";
     }
 
+
     if (Object.values(err).find(e => e.length)) {
       setErrors(err);
       return false;
     }
+
     return true;
   };
   const handleSubmit = e => {
     e.preventDefault();
     if (validate()) {
       console.log("form sumbitted", form);
-    }
-    fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
-      method: "POST",
-      body: JSON.stringify(form),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
+
+      fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+        method: "POST",
+        body: JSON.stringify(form),
+        headers: {
+          "Content-Type": "application/json"
+        }
       })
-      .catch(error => {
-        console.log(error);
-      });
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+
+        }).then(setWinInfo(`Wiadomość została wysłana! Wkrótce się skontaktujemy.`))
+        .catch(error => {
+          console.log(error);
+
+        });
+
+        console.log(winInfo)
+    }
+
+
   };
 
   return (
@@ -79,46 +88,47 @@ function HomeContactUs() {
         <div className="ContactUs__main">
           <span className="ContactUs__contact">Skontaktuj się z nami</span>
           <img src={require("./../../assets/Decoration.svg")} />
-          <p></p>
+          <span className="ContactUs__winInfo">{winInfo}</span>
+
           <div>
             <form className="ContactUs__form">
               <div className="ContactUs__name">
                 <label>
                   <span>Wpisz swoje imię</span>
                   <input
-                    className="ContactUs_input"
+                    className={!errors.name ? "ContactUs_input" : "ContactUs_error"}
                     type="name"
                     name="name"
                     id="name"
                     onChange={updateForm}
                     placeholder="Maciej"
                   />
-                  <p>{errors.name}</p>
+                  <p className="ContactUs_errorText">{errors.name}</p>
                 </label>
                 <label>
                   <span>Wpisz swój email</span>
                   <input
-                    className="ContactUs_input"
+                    className={!errors.email ? "ContactUs_input" : "ContactUs_error"}
                     type="email"
                     name="email"
                     id="email"
                     onChange={updateForm}
                     placeholder="xyz@gmail.com"
                   />
-                  <p>{errors.email}</p>
+                <p className="ContactUs_errorText">{errors.email}</p>
                 </label>
               </div>
               <label>
                 <span>Wpisz swoją wiadomość:</span>
                 <textarea
-                  className="ContactUs_textarea"
+                    className={!errors.message ? "ContactUs_textarea" : "ContactUs_errorArea"}
                   type="message"
                   name="message"
                   id="message"
                   onChange={updateForm}
                   placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 />
-              <p>{errors.message}</p>
+                <p className="ContactUs_errorText">{errors.message}</p>
               </label>
               <input
                 className="btn"
@@ -132,8 +142,12 @@ function HomeContactUs() {
         <footer className="ContactUs__footer">
           <span>Copyright by Coders Lab</span>
           <div className="ContactUs__images">
-            <img src={require("./../../assets/Facebook.png")} />
-            <img src={require("./../../assets/Instagram.png")} />
+            <a href="https://www.facebook.com">
+              <img src={require("./../../assets/Facebook.png")} />
+            </a>
+            <a href="https://www.instagram.com">
+              <img src={require("./../../assets/Instagram.png")} />
+            </a>
           </div>
         </footer>
       </section>
