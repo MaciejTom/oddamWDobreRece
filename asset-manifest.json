@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/oddamWDobreRece/static/css/main.dc0453d2.chunk.css",
+    "main.js": "/oddamWDobreRece/static/js/main.3d3e3a14.chunk.js",
+    "main.js.map": "/oddamWDobreRece/static/js/main.3d3e3a14.chunk.js.map",
+    "runtime-main.js": "/oddamWDobreRece/static/js/runtime-main.e43f9b13.js",
+    "runtime-main.js.map": "/oddamWDobreRece/static/js/runtime-main.e43f9b13.js.map",
+    "static/js/2.90a75dfd.chunk.js": "/oddamWDobreRece/static/js/2.90a75dfd.chunk.js",
+    "static/js/2.90a75dfd.chunk.js.map": "/oddamWDobreRece/static/js/2.90a75dfd.chunk.js.map",
+    "index.html": "/oddamWDobreRece/index.html",
+    "precache-manifest.c11c9892e581a64964ebd35a9fa02c8a.js": "/oddamWDobreRece/precache-manifest.c11c9892e581a64964ebd35a9fa02c8a.js",
+    "service-worker.js": "/oddamWDobreRece/service-worker.js",
+    "static/css/main.dc0453d2.chunk.css.map": "/oddamWDobreRece/static/css/main.dc0453d2.chunk.css.map",
+    "static/js/2.90a75dfd.chunk.js.LICENSE.txt": "/oddamWDobreRece/static/js/2.90a75dfd.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/oddamWDobreRece/static/media/People.c37458cc.png",
+    "static/media/Decoration.svg": "/oddamWDobreRece/static/media/Decoration.6baf5950.svg",
+    "static/media/HeroImage.jpg": "/oddamWDobreRece/static/media/HeroImage.a10beb15.jpg",
+    "static/media/Signature.svg": "/oddamWDobreRece/static/media/Signature.d87cadf2.svg",
+    "static/media/logo.svg": "/oddamWDobreRece/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e43f9b13.js",
+    "static/js/2.90a75dfd.chunk.js",
+    "static/css/main.dc0453d2.chunk.css",
+    "static/js/main.3d3e3a14.chunk.js"
+  ]
+}
