@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import logo from "./logo.svg";
 import {} from "react-router";
 import Home from "./components/Home";
@@ -12,27 +12,31 @@ import {
   Switch,
   Route,
   Link,
-  Navlink
+  Navlink,
+  Redirect
 } from "react-router-dom";
 import PrivateRoute from "./components/Auth/PrivateRoute";
 import Thx from "./components/Thx/Thx";
+import { AuthContext } from "./components/Auth/Auth";
 
 function App() {
+const { currentUser } = useContext(AuthContext);
+
   return (
     <div className="App">
       <header className="App-header">
-        <AuthProvider>
+
           <Router>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/logowanie" component={Login} />
               <Route path="/rejestracja" component={Register} />
               <Route path="/wylogowano" component={Logout} />
-              <Route path="/oddaj-rzeczy" component={GiveAway} />
+              <Route path="/oddaj-rzeczy" component={GiveAway} >{!currentUser && <Redirect to="/logowanie"/>}</Route>
               <Route path="/thx" component={Thx} />
             </Switch>
           </Router>
-        </AuthProvider>
+
       </header>
     </div>
   );

@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Form, { Page } from "react-form-carousel";
 import firebase from "firebase";
 import { useHistory } from "react-router-dom";
-// import {withFirebase} from './Firebase'
+import { AuthContext } from "../Auth/Auth";
+
 
 function GiveAwayForm() {
 
-
+  const { currentUser } = useContext(AuthContext);
+console.log(currentUser)
 
   const [bag, setBag] = useState("1");
   const [city, setCity] = useState("Poznań");
@@ -35,25 +37,26 @@ function GiveAwayForm() {
 
   const db = firebase.firestore()
   const history = useHistory();
+console.log(db)
 
-  // const handleSubmit = (props) => {
-  //     db.collection(`${props}`).add({
-  //         user: userEmail,
-  //         IlośćWorków: bag,
-  //         Miasto: city,
-  //         CoChceszOddać: typeGive,
-  //         KomuChceszPomóc: whoGive,
-  //         Adres: addressInfo,
-  //         Data: dateInfo
-  //     })
-  //         .then(function (docRef) {
-  //             console.log("Document written with ID: ", docRef.id);
-  //             history.push('/thx')
-  //         })
-  //         .catch(function (error) {
-  //             console.error("Error adding document: ", error);
-  //         });
-  // }
+  const handleSubmit = (currentUser) => {
+      db.collection("info").add({
+          user: currentUser.email,
+          IlośćWorków: bag,
+          Miasto: city,
+          CoChceszOddać: typeGive,
+          KomuChceszPomóc: whoGive,
+          Adres: addressInfo,
+          Data: dateInfo
+      })
+          .then(function (docRef) {
+              console.log("Document written with ID: ", docRef.id);
+              history.push('/thx')
+          })
+          .catch(function (error) {
+              console.error("Error adding document: ", error);
+          });
+  }
   // useEffect( ( ) => {
   //     db.collection(`${userAuth}`).get().then((querySnapshot) => {
   //         querySnapshot.forEach((doc) => {
@@ -91,10 +94,10 @@ function GiveAwayForm() {
   const handleDateGive = ({ target }) => {
     setDateInfo(prev => ({ ...prev, [target.name]: target.value }));
   };
-
+console.log(currentUser)
   return (
     <main className="GiveAwayForm">
-      <Form>
+      <Form onSubmit={ () => handleSubmit(currentUser)}>
         <Page>
           <div className="GiveAwayForm__important">
             <h1>Ważne!</h1>
@@ -345,8 +348,8 @@ function GiveAwayForm() {
               <div className="GiveAwayForm__givingBack">
                 <img src={require("./../../assets/Icon.png")} alt="icon" />
                 <p>
-                  {bag} {bag === "1" ? "worek" : "worki"}, {typeGive},{" "}
-                  {whoGive.join(",")}
+                  {bag} {bag === "1" ? "worek" : "worki"} {bag === "5" && "worków"}, {typeGive},{" "}
+                  {whoGive.join(", ")}
                 </p>
               </div>
               <div className="GiveAwayForm__givingBack">

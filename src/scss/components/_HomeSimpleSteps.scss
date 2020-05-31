@@ -53,10 +53,12 @@
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    color: $color-alt2;
     .btn {
       @include button(2.25rem);
       text-align: center;
       font-weight: lighter;
+      color: $color-alt3;
       &:visited {
         color: $color-alt3;
       }

@@ -14,7 +14,7 @@ import {
 
 
 
-function GiveAway({fire}) {
+function GiveAway() {
 
 
   return (
