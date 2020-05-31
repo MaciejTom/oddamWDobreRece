@@ -117,8 +117,8 @@ function HomeWhoWeHelp() {
         </div>
         <p className="WhoWeHelp__describe">{getFundations()?.desc}</p>
         <ul>
-          {currentPosts?.map(el => (
-            <li className="WhoWeHelp__el">
+          {currentPosts?.map((el, i) => (
+            <li key={i} className="WhoWeHelp__el">
               <div className="WhoWeHelp__item">
                 <span className="WhoWeHelp__header">{el.header}</span>
 
@@ -132,8 +132,8 @@ function HomeWhoWeHelp() {
         </ul>
         <div className="WhoWeHelp__paginationBtns">
           {pageNumbers.length > 1 &&
-            pageNumbers.map(number => (
-              <button onClick={() => paginate(number)}>{number}</button>
+            pageNumbers.map((number, index) => (
+              <button key={index} onClick={() => paginate(number)}>{number}</button>
             ))}
         </div>
       </section>

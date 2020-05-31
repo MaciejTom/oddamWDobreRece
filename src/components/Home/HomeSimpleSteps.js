@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Auth/Auth";
 
 function HomeSimpleSteps() {
+  const { currentUser } = useContext(AuthContext);
   return (
     <>
       <section className="SimpleSteps" name="HomeSimpleSteps">
@@ -44,9 +46,13 @@ function HomeSimpleSteps() {
             </span>
           </div>
         </div>
-        <div className="SimpleSteps__btn">
+        {!currentUser?.email && <div className="SimpleSteps__btn">
           <Link to="/logowanie" className="btn"><span>ODDAJ</span><span> RZECZY</span></Link>
-        </div>
+        </div>}
+
+        {currentUser?.email && <div className="SimpleSteps__btn">
+          <Link to="/oddaj-rzeczy" className="btn"><span>ODDAJ</span><span> RZECZY</span></Link>
+        </div>}
       </section>
     </>
   );

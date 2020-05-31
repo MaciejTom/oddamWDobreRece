@@ -15,6 +15,7 @@ import {
   Navlink
 } from "react-router-dom";
 import PrivateRoute from "./components/Auth/PrivateRoute";
+import Thx from "./components/Thx/Thx";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <Route path="/rejestracja" component={Register} />
               <Route path="/wylogowano" component={Logout} />
               <Route path="/oddaj-rzeczy" component={GiveAway} />
+              <Route path="/thx" component={Thx} />
             </Switch>
           </Router>
         </AuthProvider>

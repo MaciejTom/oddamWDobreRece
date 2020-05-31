@@ -94,7 +94,7 @@ const Register = ({ history }) => {
               Email
               <input
                 className={!errors.email ? "Register__input" : "Register_error"}
-                
+
                 type="email"
                 name="email"
                 id="email"
@@ -106,7 +106,7 @@ const Register = ({ history }) => {
               Hasło
               <input
                 className={!errors.password ? "Register__input" : "Register_error"}
-                
+
                 type="password"
                 name="password"
                 id="password"
@@ -118,7 +118,7 @@ const Register = ({ history }) => {
               Powtórz hasło
               <input
                 className={!errors.passwordRep ? "Register__input" : "Register_error"}
-                
+
                 type="password"
                 name="passwordRep"
                 id="passwordRep"
