@@ -8,13 +8,14 @@ function HomeWhoWeHelp() {
   const [postsPerPage, setPostsPerPage] = useState(3);
 
   useEffect(() => {
-    fetch("http://localhost:3000/Fundations")
+    fetch("https://api.jsonbin.io/b/5ed3b29660775a5685857a68/1")
       .then(res => res.json())
       .then(items => setInfo(items));
   }, []);
 
   const getFundations = () => {
     return info?.find(fun => fun.name === current);
+    console.log(info)
   };
 
   const handleChangeFundation = (e) => {
