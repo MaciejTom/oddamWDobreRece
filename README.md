@@ -5,12 +5,12 @@ This is an application for those who want to donate their unused items (clothes,
 
 ##Technologies:
 
--JavaScript
--React
--React-scroll
--React-form-carousel
--React-router-dom
--Firebase(Authentication, Database)
--JSONBIN.io
--SASS
--Context API
+- JavaScript
+- React
+- React-scroll
+- React-form-carousel
+- React-router-dom
+- Firebase(Authentication, Database)
+- JSONBIN.io
+- SASS
+- Context API
