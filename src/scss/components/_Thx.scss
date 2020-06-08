@@ -2,7 +2,10 @@
   background: url("../../assets/Background-Teddy.png");
   height: 100vh;
   display: flex;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
   .Thx__div {
     display: flex;
     width: 75%;

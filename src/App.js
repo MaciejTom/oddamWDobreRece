@@ -15,7 +15,7 @@ import {
   Navlink,
   Redirect
 } from "react-router-dom";
-import PrivateRoute from "./components/Auth/PrivateRoute";
+
 import Thx from "./components/Thx/Thx";
 import { AuthContext } from "./components/Auth/Auth";
 

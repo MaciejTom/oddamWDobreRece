@@ -17,7 +17,7 @@ function HomeHeader() {
     <>
       <header className="header" name="HomeHeader">
         <div className="header__photo">
-          <img src={require("./../../assets/HeroImage.jpg")} />
+        
         </div>
         <div className="header__mainDiv">
           <Navigation />

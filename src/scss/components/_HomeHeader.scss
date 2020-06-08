@@ -2,7 +2,12 @@
   display: flex;
   .header__photo {
     width: 42%;
-
+    background: url("../../assets/HeroImage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media (min-width: 1900px) {
+      background-size: contain;
+    }
   }
   .header__mainDiv {
     width: 58%;
@@ -45,7 +50,7 @@
       align-items: center;
       height: 93%;
       justify-content: center;
-      padding: 0 10rem 9rem 0;
+      padding: 7rem 10rem 12rem 0;
       .header__mainText {
         font-size: 2.375rem;
         text-align: center;
