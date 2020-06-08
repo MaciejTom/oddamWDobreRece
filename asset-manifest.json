@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/oddamWDobreRece/static/css/main.eca39f36.chunk.css",
-    "main.js": "/oddamWDobreRece/static/js/main.b5e5cf1f.chunk.js",
-    "main.js.map": "/oddamWDobreRece/static/js/main.b5e5cf1f.chunk.js.map",
+    "main.css": "/oddamWDobreRece/static/css/main.27ff1035.chunk.css",
+    "main.js": "/oddamWDobreRece/static/js/main.0d9004a5.chunk.js",
+    "main.js.map": "/oddamWDobreRece/static/js/main.0d9004a5.chunk.js.map",
     "runtime-main.js": "/oddamWDobreRece/static/js/runtime-main.e43f9b13.js",
     "runtime-main.js.map": "/oddamWDobreRece/static/js/runtime-main.e43f9b13.js.map",
-    "static/js/2.041c7938.chunk.js": "/oddamWDobreRece/static/js/2.041c7938.chunk.js",
-    "static/js/2.041c7938.chunk.js.map": "/oddamWDobreRece/static/js/2.041c7938.chunk.js.map",
+    "static/js/2.88210005.chunk.js": "/oddamWDobreRece/static/js/2.88210005.chunk.js",
+    "static/js/2.88210005.chunk.js.map": "/oddamWDobreRece/static/js/2.88210005.chunk.js.map",
     "index.html": "/oddamWDobreRece/index.html",
-    "precache-manifest.afc1e8e9dcdc9e78daf790988b6e714e.js": "/oddamWDobreRece/precache-manifest.afc1e8e9dcdc9e78daf790988b6e714e.js",
+    "precache-manifest.931a2ca8cec35d9df6a33e5ea1f790e8.js": "/oddamWDobreRece/precache-manifest.931a2ca8cec35d9df6a33e5ea1f790e8.js",
     "service-worker.js": "/oddamWDobreRece/service-worker.js",
-    "static/css/main.eca39f36.chunk.css.map": "/oddamWDobreRece/static/css/main.eca39f36.chunk.css.map",
-    "static/js/2.041c7938.chunk.js.LICENSE.txt": "/oddamWDobreRece/static/js/2.041c7938.chunk.js.LICENSE.txt",
+    "static/css/main.27ff1035.chunk.css.map": "/oddamWDobreRece/static/css/main.27ff1035.chunk.css.map",
+    "static/js/2.88210005.chunk.js.LICENSE.txt": "/oddamWDobreRece/static/js/2.88210005.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/oddamWDobreRece/static/media/People.c37458cc.png",
     "static/media/Decoration.svg": "/oddamWDobreRece/static/media/Decoration.6baf5950.svg",
     "static/media/Signature.svg": "/oddamWDobreRece/static/media/Signature.d87cadf2.svg",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e43f9b13.js",
-    "static/js/2.041c7938.chunk.js",
-    "static/css/main.eca39f36.chunk.css",
-    "static/js/main.b5e5cf1f.chunk.js"
+    "static/js/2.88210005.chunk.js",
+    "static/css/main.27ff1035.chunk.css",
+    "static/js/main.0d9004a5.chunk.js"
   ]
 }
